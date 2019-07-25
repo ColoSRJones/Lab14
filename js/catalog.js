@@ -35,7 +35,7 @@ function addSelectedItemToCart() {
   // TODO: suss out the item picked from the select list
   // TODO: get the quantity
   // TODO: using those, create a new Cart item instance
-  var selectElement = document.getElementById{'items'};
+  var selectElement = document.getElementById('items');
   var quantityElement = document.getElementById('quantity');
   var newItem = new Cart(selectElement.value, quantityElement.value);
 }

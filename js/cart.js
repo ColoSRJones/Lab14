@@ -30,13 +30,14 @@ function showCart() {
 	if (Cart.length !== 0) {
 		for (var i = 0; i < Cart.length; i++) {
 			// TODO: Create a TR
+			console.log(Cart[i])
 			var tableRow = document.createElement('tr');
 			var itemData = document.createElement('td');
 			var quantityData = document.createElement('td');
 			var removeButton = document.createElement('td');
 			removeButton.setAttribute('id', Cart[i].item);
 			removeButton.addEventListener('click', removeItemFromCart);
-			itemData.textContent = Cart[i].item;
+			itemData.textContent = Cart[i].product;
 			quantityData.textContent = Cart[i].quantity;
 			removeButton.textContent = 'X';
 			tableRow.appendChild(removeButton);
