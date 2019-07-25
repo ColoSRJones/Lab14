@@ -149,26 +149,38 @@ function populateForm() {
   };
 
 function Render() {
-  var productSection = document.getElementById ("products");
+  var productSection = document.getElementById ("catalog");
+  var itemsList = document.getElementById("items");
   for(var i = 0; i < allProducts.length; i++){
     //randomProducts[i].views++;
     var img = document.createElement('img');
     var description = document.createElement('p');
     var price = document.createElement( "h1");
+    var form = document.createElement("form");
+    var options = document.createElement("option");
+
     img.setAttribute('src', allProducts[i].image);
     img.setAttribute('data-name', allProducts[i].name);
+    form.addEventListener('click', addSelectedItemToCart);
+    img.setAttribute('height', '250px');
+    img.setAttribute('width', '250px');
+    img.setAttribute('hspace', '20px');
+    options.textContent = allProducts[i].name;
+
     description.textContent ='Product description: ' + allProducts[i].description;
     price.textContent = "Price: " + allProducts[i].price;
-  //img.addEventListener('click', handleEvent);
     productSection.appendChild(img);
     productSection.appendChild(description);
     productSection.appendChild(price);
+    productSection.appendChild(form);
+    itemsList.appendChild(options);
 };
   //TODO: Add an <option> tag inside the form's select for each product
   var selectElement = document.getElementById('items');
   for (var i in Product.allProducts) {
 
   }
+
 
 }
 
@@ -179,11 +191,13 @@ Render();
 // object, save the whole thing back to local storage and update the screen
 // so that it shows the # of items in the cart and a quick preview of the cart itself.
 function handleSubmit(event) {
-
+  event.preventDefault();
   // TODO: Prevent the page from reloading
 
   // Do all the things ...
   addSelectedItemToCart();
+   var selectedItem = document.getElementById("items").val
+    
   saveCartToLocalStorage();
   updateCounter();
   updateCartPreview();
