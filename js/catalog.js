@@ -132,7 +132,9 @@ function populateForm() {
 
   function Product(name, extension, description, price){
     this.name = name;
+
     this.image = "assets/" + name + "." + extension;
+
     this.clicks = 0;
     this.views = 0;
     this.description = description;

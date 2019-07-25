@@ -1,19 +1,21 @@
-/* TODO: Make it awesome */
 html{
+
 	background-color: #70EE9C
+
 }
 body {
-	font-size: 20px;
-	text-align: center;
+    font-size: 20px;
+    text-align: center;
 }
 #products{
-	max-width: 960px;
-	
+    max-width: 960px;
+    
 }
 #catalog p{
 	float: left;
 }
 #catalog img {
+
 	box-shadow: 0 25px 8px -8px black;
 	border-radius: 25%;
 	background-image: cover;
@@ -33,4 +35,5 @@ p{
 .imageContainer{
 	max-width: 33%;
 	float: left;
+
 }
