@@ -2,10 +2,168 @@
 
 'use strict';
 
+var allProducts = [];
+var products = [
+  {
+      name: "bag",
+      ext: "jpg",
+      description: "r2d2 rolling suitcase",
+      price: 54.99,
+  },
+  {
+      name: "banana",
+      ext: "jpg",
+      description: "cuts up bananas",
+      price: 4.99,
+  },
+  {
+      name: "bathroom",
+      ext: "jpg",
+      description: "poop in style",
+      price: 59.99,
+  },
+  {
+      name: "boots",
+      ext: "jpg",
+      description: "breathable rain boots",
+      price: 19.99,
+  },
+  {
+      name: "breakfast",
+      ext: "jpg",
+      description: "all your breakfast in one go!",
+      price: 34.99,
+  },
+  {
+      name: "bubblegum",
+      ext: "jpg",
+      description: "Leaves your breath meaty fresh!",
+      price: 3.99,
+  },
+  {
+      name: "chair",
+      ext: "jpg",
+      description: "the comfiest chair around!",
+      price: 49.99,
+  },
+  {
+      name: "cthulhu",
+      ext: "jpg",
+      description: "Bow before your overlord.",
+      price: 14.99,
+  },
+  {
+      name: "dog-duck",
+      ext: "jpg",
+      description: "make your neighbors think you have a pet duck!",
+      price: 11.99,
+  },
+  {
+      name: "dragon",
+      ext: "jpg",
+      description: "Authentic dragon meat!",
+      price: 3.99,
+  },
+  {
+      name: "pen",
+      ext: "jpg",
+      description: "extremely useful pens!",
+      price: 4.99,
+  },
+  {
+      name: "pet-sweep",
+      ext: "jpg",
+      description: "Finally, a use for your pet!",
+      price: 19.99,
+  },
+  {
+      name: "scissors",
+      ext: "jpg",
+      description: "A cut above the rest!",
+      price: 7.99,
+  },
+  {
+      name: "shark",
+      ext: "jpg",
+      description: "the comfiest shark bite you'll ever experience!",
+      price: 74.99,
+  },
+  {
+      name: "sweep",
+      ext: "png",
+      description: "Time for your baby to earn their keep",
+      price: 34.99,
+  },
+  {
+      name: "tauntaun",
+      ext: "jpg",
+      description: "It's still warm!",
+      price: 64.99,
+  },
+  {
+      name: "unicorn",
+      ext: "jpg",
+      description: "They really do exist, and they're delicious!",
+      price: 9.99,
+  },
+  {
+      name: "usb",
+      ext: "gif",
+      description: "Mmmmm wiggly!",
+      price: 24.99,
+  },
+  {
+      name: "water-can",
+      ext: "jpg",
+      description: "We swear it works!",
+      price: 12.99,
+  },
+  {
+      name: "wine-glass",
+      ext: "jpg",
+      description: "almost spill proof!",
+      price: 11.99,
+  },
+];
+
 // On screen load, we call this method to put all of the busmall options
 // (the things in the Product.allProducts array) into the drop down list.
 function populateForm() {
 
+  function Product(name, extension, description, price){
+    this.name = name;
+    this.image = "../images/" + name + "." + extension;
+    this.clicks = 0;
+    this.views = 0;
+    this.description = description;
+    this.price = price;
+    
+    allProducts.push(this);
+};
+  function createProducts() {
+    for(var i = 0; i < products.length; i++){
+      new Product(products[i].name,products[i].ext, products[i].description, products
+        [i].price);
+    }
+    console.table(allProducts);
+  };
+
+function Render() {
+  var productSection = document.getElementById ("products");
+  for(var i = 0; i < allProducts.length; i++){
+    //randomProducts[i].views++;
+    var img = document.createElement('img');
+    var description = document.createElement('p');
+    var price = document.createElement( "h1");
+    img.setAttribute('src', allProducts[i].image);
+    img.setAttribute('data-name', allProducts[i].name);
+    description.textContent ='Product description: ' + allProducts[i].description;
+    price.textContent = "Price: " + allProducts[i].price;
+  //img.addEventListener('click', handleEvent);
+    productSection.appendChild(img);
+    productSection.appendChild(description);
+    productSection.appendChild(price);
+};
   //TODO: Add an <option> tag inside the form's select for each product
   var selectElement = document.getElementById('items');
   for (var i in Product.allProducts) {
@@ -14,6 +172,9 @@ function populateForm() {
 
 }
 
+createProducts();
+Render();
+}
 // When someone submits the form, we need to add the selected item to the cart
 // object, save the whole thing back to local storage and update the screen
 // so that it shows the # of items in the cart and a quick preview of the cart itself.
@@ -58,4 +219,5 @@ catalogForm.addEventListener('submit', handleSubmit);
 
 // Before anything else of value can happen, we need to fill in the select
 // drop down list in the form.
+
 populateForm();
