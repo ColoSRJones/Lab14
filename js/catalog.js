@@ -195,9 +195,7 @@ function handleSubmit(event) {
   // TODO: Prevent the page from reloading
 
   // Do all the things ...
-  addSelectedItemToCart();
-   var selectedItem = document.getElementById("items").val
-    
+  addSelectedItemToCart();  
   saveCartToLocalStorage();
   updateCounter();
   updateCartPreview();
