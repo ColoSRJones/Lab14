@@ -3,6 +3,13 @@
 'use strict';
 
 // TODO: Create a "Cart" constructor (named Cart) that has item and quantity
+var Cart = function (item,quantity){
+this.item = item;
+this.quanity = quanity;
+Cart.allItems.push(this);
+};
+Cart.allItems =[];
+
 // properties, and builds an array of items as you create instances
 
 
