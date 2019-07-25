@@ -37,7 +37,7 @@ function showCart() {
 			var removeButton = document.createElement('td');
 			removeButton.setAttribute('id', Cart[i].item);
 			removeButton.addEventListener('click', removeItemFromCart);
-			itemData.textContent = Cart[i].product;
+			itemData.textContent = Cart[i].item;
 			quantityData.textContent = Cart[i].quantity;
 			removeButton.textContent = 'X';
 			tableRow.appendChild(removeButton);

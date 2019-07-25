@@ -1,116 +1,27 @@
-/* TODO: Make it awesome */
-.center {
-  text-align: center;
-}
-
-body{
-  background : #57FF94;
-}
-
-h1 {
-  color:#138A36;
-}
-/* this animates text */
-
-.animate-added-cart {
-  margin-top: 2%;
-  /* color:pink; */
-  display: block;
-  width: 100px;
-  /* height:200px; */
-  /* position: relative; */
-  animation-name:boxFrame;
-  animation-duration: 6s;
-}
-
-@keyFrames boxFrame {
-  0% {
-    
-  }
-  30% {
-    tranform: rotate(-180deg);
-  }
-  70%,90% {
-    transform: rotate(360deg);
-    color: white;
-  }
-}
-
-
-
-
-main {
-margin: auto;
-border: thin 5px 100% black;
-width: 100%;
-}
-
-ul-nav {
-  display: inline-block;
-  width: 40%;
-  text-align: center;
-  margin-top: 9%;
-  list-style-type: square;
-}
-.card  h1 {
-  text-align: center;
-}
-
-
-nav li {
-  display: inline-block;
-  margin-top: 2%;
- 
-}
-
-.left{
-  float: left;
-  margin-top: 2%;
-  max-width: 40%;
-  margin-left: 5%;
-}
-
-car-ol {
-  margin-top: 2%;
-}
-.cart-nav {
-  margin-bottom: 1%;
-}
-.right {
-  float: right;
-  max-width: 40%;
-  margin-top: 3%;
-  margin-right: 5%;
-  padding: auto;
-}
-footer {
-  position: absolute;
-  bottom: 0;
-  left: 43%;
 html{
-	background-color: #434371
+    background-color: #70EE9C
 }
 body {
-	font-size: 20px;
-	text-align: center;
+    font-size: 20px;
+    text-align: center;
 }
 #products{
-	max-width: 960px;
-	
+    max-width: 960px;
+    
 }
 #catalog img {
-	box-shadow: 0 25px 8px -8px black;
-	border-radius: 25%;
-	background-image: cover;
-	background-color: #70EE9C;
-	padding:  10px;
-	border: 5px solid #79AEA3;
-	margin: 20px;
-	display: inline-block;
-	max-width: 98%;
-	
-	
-  }
+    box-shadow: 0 25px 8px -8px black;
+    border-radius: 25%;
+    background-image: cover;
+    background-color: #434371;
+    padding:  10px;
+    border: 5px solid #79AEA3;
+    margin: 20px;
+    display: inline-block;
+    max-width: 98%;
+    
+    
+ }
 p{
-	padding: 20px;
+    padding: 20px;
 }
