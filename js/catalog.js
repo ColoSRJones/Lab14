@@ -132,7 +132,7 @@ function populateForm() {
 
   function Product(name, extension, description, price){
     this.name = name;
-    this.image = "../images/" + name + "." + extension;
+    this.image = "assets/" + name + "." + extension;
     this.clicks = 0;
     this.views = 0;
     this.description = description;
@@ -155,10 +155,13 @@ function Render() {
     //randomProducts[i].views++;
     var img = document.createElement('img');
     var description = document.createElement('p');
+    var imgContainer = document.createElement("div");
     var price = document.createElement( "h1");
     var form = document.createElement("form");
     var options = document.createElement("option");
-
+    imgContainer.setAttribute('id',allProducts[i].name);
+    imgContainer.setAttribute('class', 'imageContainer');
+    productSection.appendChild(imgContainer);
     img.setAttribute('src', allProducts[i].image);
     img.setAttribute('data-name', allProducts[i].name);
     form.addEventListener('click', addSelectedItemToCart);
@@ -169,10 +172,10 @@ function Render() {
 
     description.textContent ='Product description: ' + allProducts[i].description;
     price.textContent = "Price: " + allProducts[i].price;
-    productSection.appendChild(img);
-    productSection.appendChild(description);
-    productSection.appendChild(price);
-    productSection.appendChild(form);
+    imgContainer.appendChild(img);
+    imgContainer.appendChild(description);
+    imgContainer.appendChild(price);
+    imgContainer.appendChild(form);
     itemsList.appendChild(options);
 };
   //TODO: Add an <option> tag inside the form's select for each product
@@ -207,7 +210,7 @@ function addSelectedItemToCart() {
   // TODO: suss out the item picked from the select list
   // TODO: get the quantity
   // TODO: using those, create a new Cart item instance
-  var selectElement = document.getElementById{'items'};
+  var selectElement = document.getElementById('items');
   var quantityElement = document.getElementById('quantity');
   var newItem = new Cart(selectElement.value, quantityElement.value);
 }

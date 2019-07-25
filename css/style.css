@@ -1,6 +1,6 @@
 /* TODO: Make it awesome */
 html{
-	background-color: #434371
+	background-color: #70EE9C
 }
 body {
 	font-size: 20px;
@@ -10,19 +10,27 @@ body {
 	max-width: 960px;
 	
 }
+#catalog p{
+	float: left;
+}
 #catalog img {
 	box-shadow: 0 25px 8px -8px black;
 	border-radius: 25%;
 	background-image: cover;
-	background-color: #70EE9C;
+	background-color: #434371;
 	padding:  10px;
 	border: 5px solid #79AEA3;
 	margin: 20px;
 	display: inline-block;
-	max-width: 98%;
+
+	
 	
 	
   }
 p{
 	padding: 20px;
+}
+.imageContainer{
+	max-width: 33%;
+	float: left;
 }

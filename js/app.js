@@ -5,7 +5,7 @@
 // TODO: Create a "Cart" constructor (named Cart) that has item and quantity
 var Cart = function (item,quantity){
 this.item = item;
-this.quanity = quanity;
+this.quantity = quantity;
 Cart.allItems.push(this);
 };
 Cart.allItems =[];
