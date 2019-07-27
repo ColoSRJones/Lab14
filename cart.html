@@ -1,63 +1,230 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
-    <title>Bus Mall Store</title>
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  
-  <body>
-  
-    <header>
-        <h1>Bus Mall Store</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="cart.html">Cart</a><span id="itemCount"></span></li>
-            </ul>
-        </nav>
-    </header>
+<head>
+	<title>Bus Mall Store</title>
+	<link rel="stylesheet" href="css/reset.css" />
+	<link rel="stylesheet" href="css/style.css" />
+</head>
 
-    <main>
+<body>
 
-      <section class="deck col-1">
-        <div class="card">
-          <header>
-            <h1>Your Cart</h1>
-          </header>
-          <div class="copy">
-              <ol>
-                <li>Click the "X" next to any item to remove it from your cart</li>
-              </ol>
-          </div>
-        </div>
-      </section>
+	<header>
+		<h1>Bus Mall Store</h1>
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="cart.html">Cart</a><span id="itemCount"></span></li>
+			</ul>
+		</nav>
+	</header>
 
-      <section class="deck col-1">
-        <div class="card">
-            <table id="cart">
-                <thead>
-                    <tr>
-                        <th>Remove</th>
-                        <th>Quantity</th>
-                        <th>Item</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-                <tfoot></tfoot>
-            </table>
-        </div>
-      </section>
-        
-    </main>
+	<main>
 
-    <footer>
-        <p>&copy;2019 DeltaV Code 201</p>
-    </footer>
+		<section class="deck col-1">
+			<div class="card">
+				<header>
+					<h1>Your Cart</h1>
+				</header>
+				<div class="copy">
+					<ol>
+						<li>Click the "X" next to any item to remove it from your cart</li>
+					</ol>
+				</div>
+			</div>
+		</section>
 
-    <script src='js/app.js'></script>
-    <script src='js/cart.js'></script>
+		<section class="deck col-1">
+			<div class="card">
+				<table id="cart">
+					<thead>
+						<tr>
+							<th>Remove</th>
+							<th>Quantity</th>
+							<th>Item</th>
+						</tr>
+					</thead>
+					<tbody></tbody>
+					<tfoot></tfoot>
+				</table>
+			</div>
+		</section>
+
+		<div class="left">
+			<div class="form_header">
+				<h3>Personal</h3>
+			</div>
+			<div class="container">
+				<ul>
+					<div>
+						<li>
+							<label for="">Name</label>
+							<input type="text" />
+						</li>
+						<li>
+							<label for="">Last Name</label>
+							<input type="text" />
+						</li>
+					</div>
+					<div>
+						<li>
+							<label for="">Email</label>
+							<input type="text" />
+						</li>
+						<li>
+							<label for="">Phone Number</label>
+							<input type="text" />
+						</li>
+					</div>
+					<li>
+						<input type="checkbox"> <small>Sign me up!</small>
+					</li>
+				</ul>
+			</div>
+
+			<div class="form_header">
+				<h3>Billing Address</h3>
+			</div>
+			<div class="container">
+				<ul>
+					<div>
+						<li>
+							<label for="">Address</label>
+							<input type="text" />
+						</li>
+						<li>
+							<label for="">Address 2</label>
+							<input type="text" />
+						</li>
+					</div>
+					<div>
+						<li>
+							<label for="">City</label>
+							<input type="text" />
+						</li>
+						<li>
+							<label for="">State</label>
+							<select name='options'>
+								<option value='option-1'>Option 1</option>
+								<option value='option-2'>Option 2</option>
+								<option value='option-3'>Option 3</option>
+							</select>
+						</li>
+						<li>
+							<label for="">Zip</label>
+							<input type="text" />
+						</li>
+					</div>
+					<li>
+						<input type="checkbox"> <small>My Shipping Address is the same as my Billing Address.</small>
+					</li>
+				</ul>
+			</div>
+
+			<div class="form_header">
+				<h3>Shipping Address</h3>
+			</div>
+			<div class="container">
+				<ul>
+					<div>
+						<li>
+							<label for="">Address</label>
+							<input type="text" />
+						</li>
+						<li>
+							<label for="">Address 2</label>
+							<input type="text" />
+						</li>
+					</div>
+					<div>
+						<li>
+							<label for="">City</label>
+							<input type="text" />
+						</li>
+						<li>
+							<label for="">State</label>
+							<select name='options'>
+								<option value='option-1'>Option 1</option>
+								<option value='option-2'>Option 2</option>
+								<option value='option-3'>Option 3</option>
+							</select>
+						</li>
+						<li>
+							<label for="">Zip</label>
+							<input type="text" />
+						</li>
+					</div>
+					<li>
+						<input type="checkbox"> <small>Save my Shipping Address for future orders.</small>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="right">
+			<div class="form_header">
+				<h3>Secure Payment</h3>
+			</div>
+			<div class="container">
+				<ul>
+					<div>
+						<li>
+							<label for="">Credit Card Number</label>
+							<input type="text" />
+						</li>
+						<li>
+							<label for="">Expiration</label>
+							<select name='options'>
+								<option value='option-1'>Option 1</option>
+								<option value='option-2'>Option 2</option>
+								<option value='option-3'>Option 3</option>
+							</select>
+							<select name='options'>
+								<option value='option-1'>Option 1</option>
+								<option value='option-2'>Option 2</option>
+								<option value='option-3'>Option 3</option>
+							</select>
+						</li>
+					</div>
+					<div>
+						<li>
+							<label for="">CVV</label>
+							<input type="text" />
+						</li>
+					</div>
+				</ul>
+			</div>
+
+			<div class="form_header">
+				<h3>Confirmation</h3>
+			</div>
+			<div class="container">
+				<ul>
+					<div>
+						<li>
+							<input type="checkbox" /> <small>Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+								sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+								volutpat.</small>
+						</li>
+					</div>
+					<div>
+						<li>
+							<h4>Your total is: $</h4>
+						</li>
+						<li>
+							<input type="submit" value="Checkout" />
+						</li>
+					</div>
+				</ul>
+			</div>
+		</div>
+	</main>
+
+	<footer>
+		<p>&copy;2019 DeltaV Code 201</p>
+	</footer>
+
+	<script src='js/app.js'></script>
+	<script src='js/cart.js'></script>
 </body>
 
 </html>
